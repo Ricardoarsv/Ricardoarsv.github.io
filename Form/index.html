@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Form/css/style.css"">
+    <title>Formulario de satisfaccion</title>
+  </head>
+  <body>
+    <div>
+      <a href="./index.html">HTML para principiantes</a> <a href="./index2.html">CSS para principiantes</a> <a href="../JS/index3.html">JavaScript Para principiantes</a>
+      <h1>Formulario de satisfaccion</h1>
+      <p>Una vez hecha la lectura y estudio de los temas previamente vistos referentes al desarrollo web, me gustaria que rellenaras este formulario de satisfaccion para conocer tu opinion sobre la expliaccion dada y alguna sugerencia que puedas agregar en pro de mi formacion</p>
+      
+      <div>
+        <form>
+          <label id="H1">Nombre y Apellido</label>
+          <input id="entrada" 
+          type="text" 
+          id="nombre" 
+          placeholder="Marcos Villamizar"  
+          required><br>
+          <br>
+
+          <label id="H1">Edad</label>
+          <input id="entrada" 
+          type="number" 
+          id="edad" 
+          placeholder="18"  
+          required><br>
+          <br>
+
+          <label id="H1">Correo electronico</label>
+          <input id="entrada" 
+          type="email" 
+          id="correo" 
+          placeholder="xxxxxxx@gmail.com"  
+          required><br>
+          <br>
+
+          <p id="suggest">En una escala de 1 - muy mala, a 5 - excelente.<br> Como calificarias mi guia referente al desarrollo web.</p>
+          <select id="calificacion" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select><br>
+          <br>
+          
+          <label id="H1">Sugerecias</label><br>
+          <textarea id="entrada" required></textarea><br>
+          <button id="botn">Enviar</button>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
