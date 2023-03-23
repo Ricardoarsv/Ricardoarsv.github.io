@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript para principantes</title>
+        <link rel="stylesheet" href="./StylesJS.css">
+        <link rel="shortcut icon" href="./ImagesJS/JavaScript-Logo-640x400.png type="image/x-icon">
+    </head>
+    <body>
+        <div>
+            <a href=".index.html">HTML para principiantes</a> <a href="./index2.html">CSS para principiantes</a> <a href="./Form/index.html">Formulario de satisfaccion</a>
+            <h1>JS un lenguaje de programacion</h1>
+            <center>
+            <img src="./ImagesJS/pilars.png" alt="Imagen de los 3 pilares" width="120px">
+            </center>
+            <p>Antes de comenzar con la programacion que nos permite javascript en el desarrollo web, hay que tener conocimientos previos en html y css para llevarlos a cabo, por ello recomiendo clickear en los botones que nos redirigen a las explicaciones basicas acerca de este tema en la parte superior de esta pagina. Dicho esto:</p>
+            <p>Este al ser un lenguaje de programacion nos exije tener en una mente de programador, relacionada a como llevar a cabo problemas de la vida real en nuestro codigo, aprendiendo sintaxis y de forma logica, comenzar a codificar la problematica en cuestion.</p>
+
+            <h3>Conceptos basicos</h3>
+            <p>JavaScript está influenciado sobre todo por la sintaxis de Java, C y C++, pero también ha sido influenciado por Awk, Perl y Python.
+                JavaScript distingue entre mayúsculas y minúsculas (es case-sensitive) y utiliza el conjunto de caracteres Unicode. esto quiere decir que permite caracteres especiales para nombrar variables.</p>
+        
+            <p>En JavaScript, las instrucciones se denominan declaraciones y están separadas por punto y coma (;).</p>
+            <p>No es necesario un punto y coma después de una declaración si está escrita en su propia línea. Pero si se deseas más de una declaración en una línea, entonces debes separarlas con punto y coma. (Aparte de ser una muy buena practica para un codigo limpio y entendible)</p>
+            
+            <h3>Declaraciones</h3>
+            <ul>
+                <li><span>var</span> Declara una variable, opcionalmente la inicia a un valor</li>
+                <br>
+                <li><span>let</span> Declara una variable local con ámbito de bloque, opcionalmente la inicia a un valor.</li>
+                <br>
+                <li><span>const</span> Declara un nombre de constante de solo lectura y ámbito de bloque.</li>
+            </ul>
+
+            <h3>Variables</h3>
+            <p>Utiliza variables como nombres simbólicos para valores en tu aplicación. Los nombres de las variables, llamados identificadores, se ajustan a ciertas reglas:</p>
+            <p>Un identificador de JavaScript debe comenzar con una letra, un guión bajo (_) o un signo de dólar ($). Los siguientes caracteres también pueden ser dígitos (0-9).</p>
+            <p>Dado que JavaScript distingue entre mayúsculas y minúsculas, las letras incluyen los caracteres "A" a "Z" (mayúsculas), así como "a" a "z" (minúsculas).</p>
+            <p>Algunos ejemplos de nombres legales son <span>Number_hits, temp99, $credit y _name</span>. </p>
+            
+            <h3>Declarando variables</h3>
+            <p>Puedes declarar una variable de dos formas:</p>
+            <ul>
+                <li>Con la palabra clave var. Por ejemplo,<span>var x = 42</span>. Esta sintaxis se puede utilizar para declarar variables locales y globales, dependiendo del contexto de ejecución.</li>
+                <li>Con la palabra clave const o let. Por ejemplo,    <span>let y = 13</span>. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el Ámbito de variables abajo.)</li>
+            </ul>
+
+            <p>También puedes simplemente asignar un valor a una variable. Por ejemplo, <span>x = 42</span>. Este formulario crea una variable <u>global no declarada</u>. También genera una advertencia estricta de JavaScript. Las variables globales no declaradas a menudo pueden provocar un comportamiento inesperado. Por lo tanto, se desaconseja utilizar variables globales no declaradas.</p>
+
+            <h3>Valores en las variables</h3>
+            <p>Una variable declarada usando la instrucción <span>var</span> o <span>let</span> sin un valor asignado especificado tiene el valor de <u>undefined</u>.</p>
+            <p>Un intento de acceder a una variable no declarada da como resultado el disparo de una excepción <u>ReferenceError:</u></p>
+
+            <div>
+            <p>
+                var a;<br>
+                console.log('El valor de a es ' + a); // El valor de a es undefined<br>
+                <br>
+                console.log('El valor de b es ' + b); // El valor de b es undefined<br>
+                var b;<br>
+                // Esto puede desconcertarte hasta que leas 'Elevación de variable' a continuación<br>
+                <br>
+                console.log('El valor de c es ' + c); // Error de referencia no detectado: c no está definida<br>
+                <br>
+                let x;<br>
+                console.log('El valor de x es ' + x); // El valor de x es undefined<br>
+                <br>
+                console.log('El valor de y es ' + y); // Error de referencia no detectada: y no está definida<br>
+                let y;
+            </p>
+            </div>
+            <p>Puedes usar <u>undefined</u> para determinar si una variable tiene un valor. En el siguiente código, a la variable <span>input</span> no se le asigna un valor y la declaración <span>if</span> evalúa a <span>true</span>.</p>
+            <div>
+            <p>
+                var input;<br>
+                if (input === undefined) {<br>
+                    &nbsp;&nbsp;&nbsp;doThis();<br>
+                    <br>
+                } else {<br>
+                    &nbsp;&nbsp;&nbsp;doThat();<br>
+                }<br>
+            </p>
+            </div>
+
+            <p>El valor <span>undefined</span> se comporta como <span>false</span> cuando se usa en un contexto booleano. Por ejemplo, el siguiente código ejecuta la función myFunction porque el elemento <span>myArray</span> es <span>undefined:</span></p>
+            <div>
+                <p>
+                    var myArray = [];<br>
+                    if (!myArray[0]) myFunction();<br>
+
+                </p>
+            </div>
+
+            <p>l valor <span>undefined</span> se convierte en <span>NaN</span> cuando se usa en contexto numérico.</span>
+            <div>
+                <p>
+                    var a;<br>
+                    a + 2;  // Evalúa a NaN<br>
+
+                </p>
+            </div>
+            <p>Cuando evalúas una variable <span>null</span>, el valor nulo se comporta como <span>0</span> en contextos numéricos y como <span>false</span> en contextos booleanos. Por ejemplo:</p>
+            
+            <div>
+                <p>
+                    var n = null;<br>
+                    console.log(n * 32); // Registrará 0 en la consola<br>
+
+                </p>
+            </div>
+
+            <h3>Ámbito de variables</h3>
+            <p>Cuando declaras una variable fuera de cualquier función, se denomina variable global, porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función, se llama variable local, porque solo está disponible dentro de esa función.</p>
+            <p>Por ejemplo, el siguiente código registrará <span>5</span>, porque el ámbito de <span>x</span> es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de <span>x</span> no se limita al bloque de instrucciones <span>if</span> inmediato.</p>
+            
+            <div>
+                <p>
+                    if (true) {<br>
+                        var x = 5;<br>
+                      }<br>
+                      console.log(x);  // x es 5<br>
+                    
+                </p>
+            </div>
+
+            <p>Este comportamiento cambia cuando se usa la declaración <span>let</span>></p>    
+            <div>
+                <p>
+                    if (true) {<br>
+                        let y = 5;<br>
+                      }<br>
+                      console.log(y); // ReferenceError: y no está definida                      
+                </p>
+            </div>
+
+            <h3>Elevación de variables (hoisting)</h3>
+            <p>Otra cosa inusual acerca de las variables en JavaScript es que puedes hacer referencia a una variable declarada más tarde, sin obtener una excepción. Este concepto se conoce como elevación. Las variables en JavaScript son, en cierto sentido, "elevadas" (o "izadas") a la parte superior de la función o declaración. Sin embargo, las variables que se elevan devuelven un valor de <span>undefined</span>. Entonces, incluso si la declaras e inicias después de usarla o hacer referencia a esta variable, todavía devuelve <span>undefined</span>.</p>
+
+            <div>
+                <p>
+        
+                    -Ejemplo 1-<br>
+
+                    console.log(x === undefined); // true<br>
+                    var x = 3;<br>
+                    <br>
+
+                    -Ejemplo 2-<br>
+
+                    // devolverá un valor de undefined<br>
+                    var myVar = 'my value';<br>
+                    <br>
+                    (function() {<br>
+                    console.log(myVar); // undefined<br>
+                    var myVar = 'valor local';<br>
+                    })();<br>
+
+                </p>
+            </div>
+            
+            <p>Debido a la elevación, todas las declaraciones <span>var</span> en una función se deben colocar lo más cerca posible de la parte superior de la función. Esta buena práctica aumenta la claridad del código</p>
+
+            <h3>Elevacion de funcion</h3>
+            <p>En el caso de las funciones, solo se incluyen declaraciones de función, pero no las expresiones de la función.</p>
+
+            <div>
+                <p>
+                    - Declaración de función -<br>
+                    <br>
+                    foo(); // "bar"<br>
+                    <br>
+                    function foo() {<br>
+                    console.log('bar');<br>
+                    }<br>
+                    <br>
+
+                    - Expresión de función -<br>
+                    <br>
+                    baz(); // TypeError: baz no es una función<br>
+                    <br>
+                    var baz = function() {<br>
+                    console.log('bar2');<br>
+                    };<br>
+
+                </p>
+            </div>
+
+            <h3>Variables globales</h3>
+            <p>Las variables globales, de hecho, son propiedades del objeto global.</p>
+            <p>En las páginas web, el objeto global es <span>window</span>, por lo que puedes establecer y acceder a variables globales utilizando la sintaxis <span>window.variable</span>.</p>
+            <p>En consecuencia, puedes acceder a las variables globales declaradas en una «ventana» o «marco» desde otra «ventana» o «marco» especificando el nombre de la <span>window</span> o el <span>frame</span>. Por ejemplo, si declaras una variable llamada <span>phoneNumber</span> en un documento, puedes hacer referencia a esta variable desde un <span>iframe</span> como <span>parent.phoneNumber</span>.</p>
+
+            <h3>Constantes</h3>
+            <p>Puedes crear una constante de solo lectura con nombre con la palabra clave const.</p>
+            <p>La sintaxis de un identificador de constante es la misma que la de cualquier identificador de variable: debe comenzar con una letra, un subrayado o un signo de dólar ($) y puede contener caracteres alfabéticos, numéricos o de subrayado.</p>
+
+            <div>
+                <p>
+                    const PI = 3.14;
+                </p>
+            </div>
+            <p>Una constante no puede cambiar el valor a través de la asignación o volver a declararla mientras se ejecuta el script. Se debe iniciar a un valor.</p>
+            <p>Las reglas de ámbito para las constantes son las mismas que las de ámbito de bloque de las variables let. Si se omite la palabra clave const, se asume que el identificador representa una variable.</p>
+            <p>No puedes declarar una constante con el mismo nombre que una función o una variable en el mismo ámbito. sin embargo, propiedades de objetos asignados a constantes no estan protegidos de forma similar a los arrays</p>
+
+            <h3>Estructuras y tipos de datos</h3>
+            <h4>Tipos de datos</h4>
+            <ul>
+                <li>Siete tipos de datos que son primitivos:</li>
+            </ul>
+            <ol>
+                <li>Booleano. true y false.</li>
+                <br>
+                <li>null. Una palabra clave especial que denota un valor nulo.</li>
+                <br>
+                <li>undefined. Una propiedad de alto nivel cuyo valor no está definido.</li>
+                <br>
+                <li>Number. Un número entero o un número con coma flotante. Por ejemplo: 42 o 3.14159.</li>
+                <br>
+                <li>BigInt. Un número entero con precisión arbitraria. Por ejemplo: 9007199254740992n.</li>
+                <br>
+                <li>String. Una secuencia de caracteres que representan un valor de texto. Por ejemplo: "Hola"</li>
+                <br>
+                <li>Symbol. Un tipo de dato cuyas instancias son únicas e inmutables</li>
+                <br>
+                <li>Objet</li>
+            </ol>
+            <p>Aunque estos tipos de datos son una cantidad relativamente pequeña, permiten realizar funciones útiles con tus aplicaciones. Los otros elementos fundamentales en el lenguaje son los Objetos y las funciones. Puedes pensar en objetos como contenedores con nombre para los valores, y las funciones como procedimientos que puedes programar en tu aplicación.</p>
+
+            <h4>Conversion de tipos de datos</h4>
+            <p>JavaScript es un lenguaje tipado dinámicamente. Esto significa que no tienes que especificar el tipo de dato de una variable cuando la declaras. También significa que los tipos de datos se convierten automáticamente según sea necesario durante la ejecución del script.</p>
+            <p>Así, por ejemplo, puedes definir una variable de la siguiente manera:</p>
+
+            <div>
+                <p>
+                    var answer = 42;
+                </p>
+            </div>
+
+            <p>Y luego, puedes asignarle una cadena a esa misma variable, por ejemplo:</p>
+
+            <div>
+                <p>
+                    answer = 'Gracias por todo el pescado...';
+                </p>
+            </div>
+
+            <p>Debido a que JavaScript se tipifica dinámicamente, esta asignación no genera un mensaje de error.</p>
+
+            <h4>Numeros y operador '+'</h4>
+            <p>En expresiones que involucran valores numéricos y de cadena con el operador <span>+</span>, JavaScript convierte los valores numéricos en cadenas. Por ejemplo, considera las siguientes declaraciones:</p>
+
+            <div>
+                <p>
+                    x = 'La respuesta es ' + 42 // "La respuesta es 42"<br>
+                    y = 42 + ' es la respuesta' // "42 es la respuesta"
+
+                </p>
+            </div>
+
+            <p>Con todos los demás operadores, JavaScript no convierte valores numéricos en cadenas. Por ejemplo:</p>
+
+            <div>
+                <p>
+                    '37' - 7 // 30<br>  
+                    '37' + 7 // "377"
+                </p>
+            </div>
+
+            <h4>Convertir texto a numeros</h4>
+            <p>En el caso que un valor representando un número está en memoria como texto, hay métodos para la conversión.</p>
+            <ul>
+                <li><span>parseInt()</span></li>
+                <li><span>parseFloat()</span></li>
+            </ul>
+
+            <p><span>parseInt()</span> solo devuelve números enteros, por lo que su uso se reduce para decimales.</p>
+            <div>
+                <p>
+                    parseInt('101', 2) // 5
+                </p>
+            </div>
+
+            <h4>Literales</h4>
+            <p>Los literales representan valores en JavaScript. Estos son valores fijos, no variables, que literalmente proporcionas en tu script. Esta sección describe los siguientes tipos de literales:</p>
+            <ul>
+                <li>Arreglos literales</li>
+                <li>Booleanos literales</li>
+                <li>Literales de coma flotante</li>
+                <li>Literales numéricos</li>
+                <li>Objetos literales</li>
+                <li>RegExp literales</li>
+                <li>Cadenas literales</li>
+            </ul>
+
+            <h4>Arreglos literales</h4>
+            <p>Un arreglo literal es una lista de cero o más expresiones, cada una de las cuales representa un elemento del arreglo, encerrada entre corchetes ([]). Cuando creas un arreglo utilizando un arreglo literal, se inicia con los valores especificados como sus elementos, y su length se establece en el número de argumentos especificado. El siguiente ejemplo crea el arreglo coffees con tres elementos y length de tres:</p>
+
+            <div>
+                <p>
+                    let coffees = ['French Roast', 'Colombian', 'Kona'];
+                </p>
+            </div>
+
+            <h4>Comas adicionales en arreglos Literales</h4>
+            <p>No tienes que especificar todos los elementos en un arreglo literal. Si colocas dos comas en una fila, el arreglo completa el valor undefined para los elementos no especificados. El siguiente ejemplo crea el arreglo fish:</p>
+
+            <div>
+                <p>
+                    let fish = ['Lion', , 'Angel'];
+                </p>
+            </div>
+
+            <p>Este arreglo tiene dos elementos con valores y un elemento vacio (Recuerden que el primer elemento es '0', no '1')</p>
+            <ul>
+                <li><span>fish[0]</span> es "Lion"</li>
+                <li><span>fish[1]</span> es undefined</li>
+                <li><span>fish[2]</span> es "Angel"</li>
+            </ul>
+            <p>Si incluyes una coma al final de la lista de los elementos, la coma es ignorada.</p>
+
+            <p>En el siguiente ejemplo, el <span>length</span> del arreglo es tres. No hay <span>myList[3]</span>. Todas las demás comas de la lista indican un nuevo elemento.</p>
+            <div>
+                <p>
+                    let myList = ['home', , 'school', ];
+                </p>
+            </div>
+
+            <p>Entender el comportamiento de las comas adicionales es importante para comprender JavaScript como lenguaje.</p>
+
+            <p>Sin embargo, al escribir tu propio código, debes declarar explícitamente los elementos que faltan como undefined. Hacerlo así aumenta la claridad y la facilidad de mantenimiento de tu código</p>
+
+            <h4>Booleanos literales</h4>
+            <p>El tipo booleano tiene dos valores literales: <span>true</span> y <span>false</span>.</p>
+
+            <h4>Literales numéricos</h4>
+            <p>Los tipos Number y BigInt (en-US) se pueden escribir en decimal (base 10), hexadecimal (base 16), octal (base 8) y binario (base 2).</p>
+
+            <ul>
+                <li>Los tipos Number y BigInt (en-US) se pueden escribir en decimal (base 10), hexadecimal (base 16), octal (base 8) y binario (base 2).</li>
+                <br>
+                <li>Un 0 (cero) inicial en un literal numérico, o un 0o inicial (o 0O) indica que está en octal. Los números octales pueden incluir solo los dígitos 0-7.</li>
+                <br>
+                <li>Un 0x inicial (o 0X) indica un tipo numérico hexadecimal. Los números hexadecimales pueden incluir los dígitos (0-9) y las letras a-f y A-F. (Si un caracter está en mayúscula o minúscula no cambia su valor. Por lo tanto: 0xa = 0xA = 10 y 0xf = 0xF = 15).</li>
+                <br>
+                <li>Un 0b inicial (o 0B) indica un literal numérico binario. Los números binarios solo pueden incluir los dígitos 0 y 1.</li>
+            </ul>
+
+            <p>Aquí tienes algunos ejemplos de literales numéricos:</p>
+            <div>
+                <p>
+                    0, 117, -345, 123456789123456789n             (decimal, base 10) <br>
+                    015, 0001, -0o77, 0o777777777777n             (octal, base 8)<br>
+                    0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn  (hexadecimal, "hex" o base 16)<br>
+                    0b11, 0b0011, -0b11, 0b11101001010101010101n  (binario, base 2)<br>
+                </p>
+            </div>
+
+            <h4>Literales de coma flotante</h4>
+            <p>Un literal de coma flotante puede tener las siguientes partes:</p>
+
+            <ul>
+                <li>Un entero decimal que puede tener un signo (precedido por "<span>+</span>" o "<span>-</span>"),</li>
+                <br>
+                <li>Un punto decimal ("<span>.</span>"),</li>
+                <br>
+                <li>Una fracción (otro número decimal),</li>
+                <br>
+                <li>Un exponente.</li>
+                <br>
+            </ul>
+
+            <p>La parte del exponente es una "e" o "E" seguida de un número entero, que puede tener signo (precedido por "+" o "-"). Un literal de coma flotante debe tener al menos un dígito y un punto decimal o "e" (o "E").</p>
+            <p>Específicamente, la sintaxis es:</p>
+
+            <div>
+                <p>
+                    [(+|-)][dígitos].[dígitos][(E|e)[(+|-)]dígitos]
+                </p>
+            </div>
+
+            <h4>Objetos literales</h4>
+            <p>Un objeto literal es una lista de cero o más pares de nombres de propiedad y valores asociados de un objeto, entre llaves (<span>{}</span>).</p>
+            <p>l siguiente es un ejemplo de un objeto literal. El primer elemento del objeto <span>car</span> define una propiedad, <span>myCar</span>, y le asigna una nueva cadena, "<span>Saturn</span>"; al segundo elemento, la propiedad <span>getCar</span>, se le asigna inmediatamente el resultado de invocar a la función <span>(carTypes("Honda"));</span> el tercer elemento, la propiedad <span>special</span>, utiliza una variable (<span>sales</span>) existente.</p>
+
+            <div>
+                <p>
+                    var sales = 'Toyota';<br>
+                    <br>
+                    function carTypes(name) {<br>
+                        &nbsp;&nbsp;&nbsp;if (name === 'Honda') {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return name;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Lo sentimos, no vendemos " + name + ".";<br>
+                        &nbsp;&nbsp;}<br>
+                    }<br>
+                    <br>
+                    var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };<br>
+                    <br>
+                    console.log(car.myCar);   // Saturn<br>
+                    console.log(car.getCar);  // Honda<br>
+                    console.log(car.special); // Toyota<br>
+
+                </p>
+            </div>
+            
+            <p>Además, puedes utilizar un literal numérico o de cadena para el nombre de una propiedad o anidar un objeto dentro de otro. El siguiente ejemplo usa estas opciones.</p>
+
+            <div>
+                <p>
+                    var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };<br>
+                    <br>
+                    console.log(car.manyCars.b); // Jeep<br>
+                    console.log(car[7]); // Mazda<br>
+
+                </p>
+            </div>
+
+            <p>Los nombres de propiedad de los objetos pueden ser cualquier cadena, incluida la cadena vacía. Si el nombre de la propiedad no fuera un identificador o un número JavaScript válido, debe ir entre comillas.</p>
+            <p>No se puede acceder a los nombres de propiedad que no sean identificadores válidos como un punto (.), propiedad, pero se pueden acceder y configurar con la notación tipo arreglo ("[]").</p>
+
+            <div>
+                <p>
+                    var unusualPropertyNames = {<br>
+                        '': 'Una cadena vacía',<br>
+                        '!': '¡Bang!'<br>
+                      }<br>
+                      console.log(inusualPropertyNames.'');   // SyntaxError: Cadena inesperada<br>
+                      console.log(inusualPropertyNames['']);  // Una cadena vacía<br>
+                      console.log(unusualPropertyNames.!);    // SyntaxError: símbolo inesperado !<br>
+                      console.log(unusualPropertyNames['!']); // ¡Bang!<br>
+                      
+                </p>
+            </div>
+
+            <h3>Conclusion</h3>
+            <p>Aun no se ha abarcado todo sobre JS pero, como indica el nombre de esta pagina es solo una vista previa de la estructura del lenguaje, con estos conceptos claros, puedes profundizar en tu formacion en el desarrollo de software y aprender verdaderamente sobre los scripts que maneja javascript. <br> Buena suerte</p>
+
+        </div>
+    </body>
+    <footer>Derechos reservados a: Ricardo Villanueva ADSO ficha 2504301</footer>
+</html>
