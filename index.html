@@ -1,58 +1,185 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../Form/css/style.css"">
-    <title>Formulario de satisfaccion</title>
-  </head>
-  <body>
-    <div>
-      <a href="./index.html">HTML para principiantes</a> <a href="./index2.html">CSS para principiantes</a> <a href="./index3.html">JavaScript Para principiantes</a>
-      <h1>Formulario de satisfaccion</h1>
-      <p>Una vez hecha la lectura y estudio de los temas previamente vistos referentes al desarrollo web, me gustaria que rellenaras este formulario de satisfaccion para conocer tu opinion sobre la expliaccion dada y alguna sugerencia que puedas agregar en pro de mi formacion</p>
-      
-      <div>
-        <form>
-          <label id="H1">Nombre y Apellido</label>
-          <input id="entrada" 
-          type="text" 
-          id="nombre" 
-          placeholder="Marcos Villamizar"  
-          required><br>
-          <br>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML para principiantes</title>
+        <link rel="stylesheet" href="./Styles.css">
+        <link rel="shortcut icon" href="./images/logo-html-5-2048.png" type="image/x-icon">
+    </head>
+        <body>
+            <div>
+                <a href="./index2.html">CSS para principiantes</a> <a href="./index3.html">JavaScript Para principiantes</a> <a href="./Form/index.html">Formulario de satisfaccion</a>
+                <h1>HTML un lenguaje de marcado</h1>
 
-          <label id="H1">Edad</label>
-          <input id="entrada" 
-          type="number" 
-          id="edad" 
-          placeholder="18"  
-          required><br>
-          <br>
+                <center>
+                    <img src="./images/logo-html-5-2048.png" alt="Imagen de html" width="150px" HSPACE="80"> <img src="./images/Servicio-pagina-web.png" alt="Imagen de websites" width="150px"> 
+                </center>
 
-          <label id="H1">Correo electronico</label>
-          <input id="entrada" 
-          type="email" 
-          id="correo" 
-          placeholder="xxxxxxx@gmail.com"  
-          required><br>
-          <br>
+                    <p>Es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar tanto por humanos como por máquinas, ya que siguen un esquema de árbol donde existe un elemento raíz y donde el resto de etiquetas se insertan de manera lógica y estructurada. Además, se trata de un fichero de texto, y solo se necesita un editor como el bloc de notas para generar un documento HTML.</p>
+                 <h2>Etiquetas basicas de html</h2>
 
-          <p id="suggest">En una escala de 1 - muy mala, a 5 - excelente.<br> Como calificarias mi guia referente al desarrollo web.</p>
-          <select id="calificacion" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select><br>
-          <br>
-          
-          <label id="H1">Sugerecias</label><br>
-          <textarea id="entrada" required></textarea><br>
-          <button id="botn">Enviar</button>
+                <p>Para poder conocer las etiquetas debemos comprender la estructura de estas, las cuales tienen:</p>
+                <ol>
+                    <li>Apertura</li>
+                    <li>Atributo</li>
+                    <li>Valor</li>
+                    <li>Contenido</li>
+                    <li>Cierre</li>
+                </ol>
+                <h3>Apertura y Cierre</h3>
+                <p>La apertura y el cierre siempre llevan el nombre de la etiqueta HTML que usarás, y son las que sirven para delimitar el contenido de la misma. Ejemplo: '&lt;html&gt; y &lt;/html&gt;'</p>
+            
+                <h3>Atributo y Valor</h3>
+                <p>El atributo son distintos ingredientes o modificaciones que puedes hacer a la etiqueta. Como por ejemplo colocarle un ID, especificar algún evento (como los casos de onsubmit y onclick), o modificar el aspecto visual (como cambiarle el color a un texto).</p>
+                <p>El valor es la especificación de estas modificaciones. ¿Qué debe suceder después del onsubmit? ¿Qué color debe tener el texto? ¿Qué ID tendrá la etiqueta?</p>
+                
+                <h3>Contenido</h3>
+                <p>Es la información que queremos que sea afectada por la etiqueta con sus modificaciones (atributos).</p>
+            
+                <h3>Ahora bien, pasemos a las etiquetas base</h3>
+                <p>Son las primeras etiquetas que usas al crear tu archivo HTML. Necesarias para casi cualquier proyecto.</p>
+                
 
-        </form>
-      </div>
-    </div>
-  </body>
+                <table class="default">
+                    <tr>
+                        <th>&lt;!DOCTYPE&gt;</th>
+                        <th>&lt;html&gt;</th>
+                        <th>&lt;head&gt;</th>
+                        <th>&lt;title&gt;</th>
+                        <th>&lt;style&gt;</th>
+                        <th>&lt;script&gt;</th>
+                        <th>&lt;meta&gt;</th>
+                        <th>&lt;Body&gt;</th>
+                    </tr>
+                    <tr>
+                        <td>Indica la version del HTML utilizado</td>
+                        <td>La raiz del archivo</td>
+                        <td>Engloba los metadatos, aquellos como los caracteres validos etc.</td>
+                        <td>Titulo en la pestaña del navegador</td>
+                        <td>Escribe CSS dentro del doc HTM</td>
+                        <td>Enlaza o escribe JavaScript en el doc HTML</td>
+                        <td>Caracteristicas sobre la pagina</td>
+                        <td>Elementos visibles en la pagina</td>
+                    </tr>
+                </table>
+
+                <h3>Etiquetas de texto</h3>
+                <p>Esenciales para cuando deseas darle funciones, jerarquías y estilos diferentes a tu texto. Desde las etiquetas “h” que sirven para jerarquizar el texto de una página, hasta las famosas negrillas o cursivas.</p>
+                
+                <table class="default">
+                    <tr>
+                        <th>&lt;p&gt;</th>
+                        <th>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</th>
+                        <th>&lt;b&gt;</th>
+                        <th>&lt;i&gt;</th>
+                        <th>&lt;u&gt;</th>
+                        <th>&lt;a&gt;</th>
+                        <th>&lt;strong&gt;</th>
+                        <th>&lt;blockquote&gt;</th>
+                        <th>&lt;br&gt;</th>
+                    </tr>
+                    <tr>
+                        <td>Crea parrafos en la website</td>
+                        <td>Estructura los titulos y subtitulos, siendo el h1 el que tiene la jerarquia mas importante</td>
+                        <td>Texto en negrillas</td>
+                        <td>Texto en cursiva</td>
+                        <td>Texto subrayado</td>
+                        <td>Agrega un link a la website</td>
+                        <td>Texto importante en la website</td>
+                        <td>Texto en formato de cita</td>
+                        <td>Crea un salto de linea en la website</td>
+                    </tr>
+                </table>
+                
+                <h3>Etiquetas multimedia</h3>
+                <p>¿Deseas insertar un video, una imagen, un audio o un video de YouTube? Estas son tus etiquetas HTML. La más versátil de ellas es iframe, te permite insertar contenidos de otras páginas web.</p>
+
+                <table class="defaul" align="center">
+                    <tr>
+                        <th>&lt;img&gt;</th>
+                        <th>&lt;video&gt;</th>
+                        <th>&lt;iframe&gt;</th>
+                        <th>&lt;audio&gt;</th>
+                    </tr>
+                    <tr>
+                        <td>Inserta imagenes</td>
+                        <td>Inserta un video</td>
+                        <td>Inserta contenido de otras paginas</td>
+                        <td>Inserta un audio</td>
+                    </tr>
+                </table>
+
+                <h3>Etiquetas para estructurar el contenido</h3>
+                <p>Si quieres darle orden al texto, las imágenes y todo lo que coloques en tu página web, usa estas etiquetas. Desde crear listas ordenadas de texto, hasta el &lt;div&gt; por el que en algún momento sufrimos intentando centrarlo. </p>
+
+                <table class="defaul" align="center">
+                    <tr>
+                        <th>&lt;ul&gt;</th>
+                        <th>&lt;ol&gt;</th>
+                        <th>&lt;li&gt;</th>
+                        <th>&lt;div&gt;</th>
+                        <th>&lt;nav&gt;</th>
+                        <th>&lt;header&gt;</th>
+                        <th>&lt;footer&gt;</th>
+                    </tr>
+                    <tr>
+                        <td>Crea una lista sin orden</td>
+                        <td>Crea una lista ordenada</td>
+                        <td>Define los articulos de las lista</td>
+                        <td>Selecciona o agrupa etiquetas</td>
+                        <td>Crea el menu de navegacion</td>
+                        <td>Define la cabecera de la pagina</td>
+                        <td>Define el pie de pagina</td>
+                    </tr>
+                </table>
+
+                <h3>Etiquetas para crear tablas</h3>
+                <p>Las tablas son MUY útiles, especialmente cuando traemos información de una base de datos y queremos darle orden y formato a los datos.</p>
+
+                <table class="defaul" align="center">
+                    <tr>
+                        <th>&lt;table&gt;</th>
+                        <th>&lt;tr&gt;</th>
+                        <th>&lt;td&gt;</th>
+                        <th>&lt;th&gt;</th>
+                        <th>&lt;col&gt;</th>
+                    </tr>
+                    <tr>
+                        <td>Crea una tabla</td>
+                        <td>Crea las filas de la tabla</td>
+                        <td>Crea las columnas de la tabla</td>
+                        <td>Crea el titulo de cada columna</td>
+                        <td>Especifica las propiedades de las columnas</td>
+
+                    </tr>
+                </table>
+
+                <h3>Etiquetas para crear formularios</h3>
+                <p>Y por último, las de creación de formularios. ¿Quieres crear la sección de contacto? ¿O el paso de registro o login de un usuario? Estas son tus etiquetas.</p>
+            
+                <table class="defaul" align="center">
+                    <tr>
+                        <th>&lt;form&gt;</th>
+                        <th>&lt;input&gt;</th>
+                        <th>&lt;label&gt;</th>
+                        <th>&lt;textarea&gt;</th>
+                        <th>&lt;button&gt;</th>
+                    </tr>
+                    <tr>
+                        <td>Crea un formulario</td>
+                        <td>Crea un campo para introducir los datos</td>
+                        <td>El titulo del input</td>
+                        <td>Crea un campo para introducir mucho texto</td>
+                        <td>Crea un boton</td>
+
+                    </tr>
+                </table>
+
+                <h2>Conclusion</h2>
+                <p>Con esto doy por terminada mi explicacion basica sobre html y te dejo explorar por tu cuenta para profundizar en este mundo del desarrollo web, te recuerdo que html solo define el texto y lo que contendrá el sitio web, mientras que la interfaz grafica (El diseño; colores, fuentes, estilos) es definido por css y los scrips por javascript, siendo los 3 pilares del desarollo web. <br> Buena suerte. Soy Ricardo Villanueva</p>
+            </div>
+            <footer>
+                Derechos reservados a: Ricardo Villanueva ADSO ficha 2504301
+            </footer>
+        </body>
 </html>
