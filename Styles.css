@@ -1,0 +1,47 @@
+    body {
+        background: linear-gradient(to bottom, #ffba08,#faa307 20%,#f48c06 30%,#e85d04 40%, #dc2f02 50%, #d00000 60%, #9d0208 70%, #6a040f 80%, #370617 90%, #03071e 100%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0 auto;
+        max-width: 90%;
+        margin: 60px;
+        padding: 20px;
+        text-align: justify;
+        text-size-adjust: auto;
+        color: white;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    th{
+        background-color:#6a040f;
+    }
+    td{
+        padding: 5px
+    }
+    div a {
+        text-decoration: none;
+        background: #e85d04;
+        padding: 8px;
+        color: white;
+        border-radius: 8px;
+        
+    }
+    
+    div a:hover{
+        background: wheat;
+        transition: 2s;
+    }
+
+    div a:active{
+        background: white;
+    }

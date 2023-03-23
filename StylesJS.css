@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(to bottom, #ffea00,#ffd000 50%, #ffc300 60%, #ffaa00 70%, #ff9500 80%, #ff8800 90%, #ff7b00 100%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto;
+    max-width: 90%;
+    margin: 60px;
+    padding: 20px;
+    text-align: justify;
+    text-size-adjust: auto;
+    color: black;
+}
+
+div div{
+    width: 100%;
+    margin: auto;
+    max-width: fit-content;
+    outline: none;
+    text-align: justify;
+    background: linear-gradient(135deg, #481418 0%, #800e13 25%, #640d14 50%, #38040e 75%, #250902 100%);
+    background-size: 20%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#Cuerpo{
+    width: 100%;
+    margin-left: 40%;
+}
+
+span{
+    width: 100%;
+    margin: auto;
+    max-width: fit-content;
+    outline: none;
+    text-align: justify;
+    background: linear-gradient(135deg, #ad2831 0%, #800e13 25%, #640d14 50%, #38040e 75%, #250902 100%);
+    background-size: 20%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+th{
+    background-color: #013a63;
+}
+td{
+    background-color: #0096c7;
+    padding: 5px
+}
+div a {
+    text-decoration: none;
+    background: #ffaa00;
+    padding: 8px;
+    color: white;
+    border-radius: 8px; 
+    
+}
+
+div a:hover{
+    background: wheat;
+    transition: 2s;
+}
+
+div a:active{
+    background: white;
+}

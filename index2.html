@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS para principiantes</title>
+        <link rel="stylesheet" href="./Stylescss.css">
+        <link rel="shortcut icon" href="./imagescss/css.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <div>
+            <a href="../Practicas html/index.html">HTML para principiantes</a> <a href="../JS/index3.html">JavaScript Para principiantes</a>
+            <h1>CSS un lenguaje basado en reglas</h1>
+
+            <center>
+                <img src="./imagescss/R.png" width="250px">
+            </center>
+            
+            <h2>Antes de comenzar</h2>
+            <p>Recuerden que para utilizar las funciones de css en el archivo html deben hacer una etiqueta de estilo: &lt;styles&gt; y su cierre &lt;/styles&gt;. Ejemplo:</p>
+            <div>
+                <p>&lt;styles&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;body{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &lt;/styles&gt;
+                </p>
+            </div>
+            
+            <p>O bien, creando un archivo con formato .css (styles.css)en la misma area de trabajo del html y enlazandolas con la funcion &lt;link rel="stylesheet" href="styles.css"> (rel enlaza dos documentos, como importar un modulo a python) Con esto ya hecho, podemos empezar a utilizar los selectores para modificar el html, y eso veremos a continuacion.</p>
+
+            <h2>Comenzamos</h2>
+            <p>CSS puede definir el color, fuente, alineación del texto, tamaño, bordes, espaciado, capas y muchas otras características tipográficas, y pueden aplicarse distintos estilos de impresión y de pantalla. CSS también define estilos no visuales, como la velocidad de lectura y énfasis en los lectores de textos aurales.</p>
+
+            <p>Cada usuario define las reglas que especifican los grupos de estilos que van a aplicarse a elementos particulares o grupos de elementos de la página web. Por ejemplo: «Quiero que el encabezado principal de mi página se muestre en letras grandes de color rojo». El código siguiente muestra una regla CSS muy simple que proporcionaría el estilo descrito en el párrafo anterior:</p>
+
+            <div>
+                <p>h2  { <br>
+                &nbsp;&nbsp;&nbsp;color: red; <br>
+                &nbsp;&nbsp;&nbsp;font-size: 5em; <br>
+                &nbsp;&nbsp;&nbsp;} 
+                </p>
+            </div>
+            <p>La regla se abre con un selector. Este selecciona el elemento HTML que vamos a diseñar. En este caso, diseñaremos encabezados de nivel uno &lt;h2&gt;.
+            <p>Luego tenemos un conjunto de llaves { }. Entre estas habrá una o más declaraciones, que tomarán la forma de pares de propiedad y valor. Cada par especifica cada una de las propiedades de los elementos seleccionados y el valor que queremos dar a esa propiedad.</p>
+            <p>Antes de los dos puntos, tenemos la propiedad; y después, el valor. En el ejemplo anterior, tenemos la propiedad color, que puede tomar varios valores de color. También tenemos la propiedad de font-size, que puede tomar varias unidades de tamaño como valor.</p>
+            <p>Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra.</p>
+            <div>
+                <p>h2{ <br>
+                    &nbsp;&nbsp;&nbsp;color: red; <br>
+                    &nbsp;&nbsp;&nbsp;font-size: 5em; <br>
+                    &nbsp;&nbsp;&nbsp;} 
+                <br>
+                p {<br>
+                    &nbsp;&nbsp;&nbsp;color: black; <br>
+                    &nbsp;&nbsp;&nbsp;}
+                </p>
+
+            </div>
+
+            <p>Algunos valores se aprenden rápidamente, mientras que otros deberán buscarse. Queda en ti como desarrollador web aprender los esenciales para el diseño ideal de tu pagina web.</p>
+        
+            <h3>Tipos de selectores</h3>
+            <p>Existen muchos tipos diferentes de selectores. Antes, solo viste los selectores de elementos, los cuales seleccionan todos los elementos de un tipo dado en los documentos HTML. Sin embargo puedes hacer selecciones más específicas que esas. En seguida están algunos de los tipos de selectores más comunes:</p>
+            
+            <table class="default">
+                <tr>
+                    <th>Nombre del selector</th>
+                    <th>Qué selecciona</th>
+                    <th>Ejemplo</th>
+                </tr>
+                <tr>
+                    <td>Selector de elemento</td>
+                    <td>Todos los elemetos HTML del tipo seleccionado</td>
+                    <td>p { <br>} selecciona &lt;p&gt;</td>
+                </tr>
+
+                <tr>
+                    <td>Selector de identificación (ID)	</td>
+                    <td>En un documento HTML, los selectores de ID de CSS buscan un elemento basado en el contenido del atributo id.</td>
+                    <td>#prueba <br> Selecciona &lt;p id="prueba"&gt; y &lt;a id= "prueba"&gt; para modificar</td>
+                </tr>
+
+                <tr>
+                    <td>Selector de clase</td>
+                    <td>Los elementos en la página con la clase especificada (una clase puede aparecer varias veces en una página).	</td>
+                    <td>.mi-clase <br> Selecciona &lt;p class="mi-clase"&gt; y &lt;a class= "mi-clase&gt; para modificar</td>
+                </tr>
+
+                <tr>
+                    <td>Selector de atributo</td>
+                    <td>Los elementos en una página con el atributo especificado.</td>
+                    <td>.img[src] <br> Selecciona &lt;img src="imagen.png"> pero no &lt;img&gt; &lt;a class= "mi-clase"&gt;</td>
+                </tr>
+
+                <tr>
+                    <td>Selector de pseudoclase	</td>
+                    <td>Los elementos especificados, pero solo cuando esté en el estado especificado, por ejemplo cuando el puntero esté sobre él.</td>
+                    <td>a:hover Selecciona &lt;a&gt;, pero solo cuando el puntero esté sobre el enlace</td>
+                </tr>
+            </table>
+            <p>Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors">Lista de selectores</a></p>
+
+            <h3>Fuentes de texto</h3>
+            <p>Ahora que has explorado lo básico de CSS, empieza por añadir información y algunas reglas más a tu archivo style.css para que tu ejemplo se vea bonito. Primero, haz que tus fuentes y texto luzcan un poco mejor.</p>
+            <p>Debemos conocer las propiedades asignadas al texto las cuales son:</p>
+
+            <table class="default">
+                <tr>
+                    <th>Propiedad</th>
+                    <th>Descripcion</th>
+                    <th>Valores</th>
+                </tr>
+                <tr>
+                    <td>text-indent	</td>
+                    <td>Desplazamiento de la primera línea del texto	</td>
+                    <td>longitud | porcentaje</td>
+                </tr>
+
+                <tr>
+                    <td>text-align</td>
+                    <td>Alineamiento del texto</td>
+                    <td>left | right | center | justify</td>
+                </tr>
+
+                <tr>
+                    <td>text-decoration</td>
+                    <td>Espacio entre caracteres</td>
+                    <td>normal | longitud</td>
+                </tr>
+
+                <tr>
+                    <td>letter-spacing	</td>
+                    <td>Los elementos en una página con el atributo especificado.</td>
+                    <td>normal | longitud</td>
+                </tr>
+
+                <tr>
+                    <td>word-spacing</td>
+                    <td>Espacio entre palabras</td>
+                    <td>normal | longitud</td>
+                </tr>
+
+                <tr>
+                    <td>text-transform</td>
+                    <td>Transformación a mayúsculas / minúsculas</td>
+                    <td>capitalize | uppercase | lowercase | none</td>
+                </tr>
+
+                <tr>
+                    <td>line-height</td>
+                    <td>Tamaño del espacio entre líneas</td>
+                    <td>longitud | porcentaje</td>
+                </tr>
+
+                <tr>
+                    <td>vertical-align</td>
+                    <td>Alineación vertical</td>
+                    <td>top | middle | bottom baseline | sub | super | valor</td>
+                </tr>
+            </table>
+            <p>Como recordatorio amistoso, el porcentaje solicitado puede ser remplazado por pixeles, para una medida mas precisa ejemplo: 50px.</p>    
+
+            <h3>Cajas en CSS</h3>
+            <p>Una cosa que notarás sobre la escritura de CSS es que trata mucho sobre cajas —ajustando su tamaño, color, posición, etc—. Puedes pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra.</p>
+            <p>No es de extrañar que el diseño de CSS esté basado principalmente en el modelo de caja. Cada una de las cajas que ocupa espacio en tu página tiene propiedades como estas:
+            <ul>
+                <li>padding (relleno), el espacio alrededor del contenido.</li>
+                <li>border (marco), la línea que se encuentra fuera del relleno.</li>
+                <li>margin (margen), el espacio fuera del elemento que lo separa de los demás.</li>
+            </ul>
+            </p>
+            <center>
+            <img src="./imagescss/margin-padding-border-modified.png" alt="Margen borde y padding">
+            </center>
+            <p>En esta sección tambien se utiliza:</p>
+            <ul>
+                <li>width (ancho del elemento)</li>
+                <li>background-color, el color de fondo del contenido y del relleno</li>
+                <li>color, el color del contenido del elemento (generalmente texto)</li>
+                <li>text-shadow: coloca una sombra difuminada en el texto dentro del elemento</li>
+                <li>display: selecciona el modo de visualización para el elemento (no te preocupes de esto por ahora)</li>
+            </ul>
+            <p>Bien, ¡continúa y agrega más código CSS a la página! Sigue añadiendo estas reglas nuevas al final de la página, y no temas experimentar cambiando los valores para ver cómo resulta.</p>
+            
+            <h3>Dar estilo al cuerpo (body) de la pagina web</h3>
+            <p id="Cuerpo">
+                body { <br>
+                    &nbsp;&nbsp;&nbsp;width: 600px;<br>
+                    &nbsp;&nbsp;&nbsp;margin: 0 auto;<br>
+                    &nbsp;&nbsp;&nbsp;background-color: #FF9500;<br>
+                    &nbsp;&nbsp;&nbsp;padding: 0 20px 20px 20px;<br>
+                    &nbsp;&nbsp;&nbsp;border: 5px solid black;<br>
+                &nbsp;&nbsp;&nbsp;}
+            </p>
+            <p>Ahora tienes varias declaraciones en el elemento body. Revisa una por una:</p>
+            <ul>
+                <li>width: 600px; — esto hará que el cuerpo siempre tenga 600 píxeles de ancho.</li>
+                <br>
+                <li>margin: 0 auto; — cuando seleccionas dos valores dentro de propiedades como margin o padding, el primer valor afectará los lados superior (top) e inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierdo (left) y derecho (right) (aquí, auto es un valor especial que divide el espacio disponible entre derecha e izquierda).</li>
+                <br>
+                <li>background-color: #FF9500; — como antes, este selecciona el color de fondo de un elemento. Se ha usado un naranja rojizo para el elemento body en contraste con el azul oscuro del elemento <html>. Sigue y experimenta. Siéntete libre de usar white o cualquiera que sea de tu agrado.</li>
+                <br>
+                <li>padding: 0 20px 20px 20px; — tienes 4 valores puestos en el relleno, para dar un poco de espacio alrededor del contenido. Esta vez no pondrás relleno en la parte de arriba de body, 20 píxeles a la izquierda, abajo y derecha. Los valores se ponen: arriba, derecha, abajo e izquierda, en ese orden.</li>
+                <br>
+                <li>border: 5px solid black; — este simplemente pone un borde de 5 píxeles de ancho, continuo y de color negro alrededor del elemento body.</li>
+            </ul>
+            <h3>Conclusion</h3>
+            <p>Dicho todo esto, doy por terminada la explicacion basica referente a CSS para poder modificar tu pagina web y te invito a profundizar todo aquello que puedes hacer con esta herramienta de diseño web. <br>
+            Buena suerte.</p>
+        </div>
+    </body>
+    <footer>Derechos reservados a: Ricardo Villanueva ADSO ficha 2504301</footer>
+</html
