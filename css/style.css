@@ -1,0 +1,112 @@
+body {
+  background: linear-gradient(to bottom, #aad576,#73a942 50%, #538d22 60%, #245501 70%, #1a4301 80%, #143601 90%, #111d13 100%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 auto;
+  max-width: 90%;
+  margin: 60px;
+  padding: 20px;
+  text-align: justify;
+  text-size-adjust: auto;
+  color: white;
+}
+
+form{
+  margin: 300px;
+  text-align:justify;
+  max-width: 10%;
+  margin: 50px;
+  margin-left: 200px;
+
+}
+
+label{
+  width: 300px;
+}
+input{
+  width: 300px;
+}
+
+#calificacion{
+  text-decoration: none;
+  background: #aad576;
+  padding: 8px;
+  color: white;
+  border-radius: 8px;
+  width: 120px;
+  
+
+}
+
+#suggest{
+  text-decoration: none;
+  font-size: 30;
+  background: #aad576;
+  padding: 8px;
+  color: black;
+  border-radius: 8px;
+  width: 400px;
+}
+#entrada {
+  text-decoration: none;
+  background: #aad576;
+  padding: 8px;
+  color: black;
+  border-radius: 8px;
+  width: 800px;
+}
+
+div div{
+  text-decoration: none;
+  background: #579723;
+  padding: 8px;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  text-align: justify;
+}
+
+#Cuerpo{
+  width: 100%;
+  margin-left: 40%;
+}
+
+#H1 {
+  font-size: 30px;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  border-radius: 8px;
+  max-width: 240px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#botn{
+  text-decoration: none;
+  background: #538d22;
+  padding: 8px;
+  color: white;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+div a {
+  text-decoration: none;
+  background: #538d22;
+  padding: 8px;
+  color: white;
+  border-radius: 8px; 
+  
+}
+
+div a:hover{
+  background: wheat;
+  transition: 2s;
+}
+
+div a:active{
+  background: white;
+}
