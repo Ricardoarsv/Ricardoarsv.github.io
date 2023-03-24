@@ -51,7 +51,7 @@
           <br>
           
           <label id="H1">Sugerecias</label><br>
-          <textarea id="entrada" name="data[Sugerecias]" required></textarea><br>
+          <textarea id="entrada" name="data[Sugerencias]" required></textarea><br>
           <button id="botn">Enviar</button>
 
         </form>
@@ -69,7 +69,7 @@
         response => response.json()
     ).then((html) => {
       // you can put any JS code here
-      window.open('../Form/index.html', '_blank');
+      window.location.reload();
 
     });
   });
