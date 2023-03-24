@@ -12,38 +12,41 @@
       <p>Una vez hecha la lectura y estudio de los temas previamente vistos referentes al desarrollo web, me gustaria que rellenaras este formulario de satisfaccion para conocer tu opinion sobre la expliaccion dada y alguna sugerencia que puedas agregar en pro de mi formacion</p>
       
       <div>
-        <form>
-          <label id="H1">Nombre y Apellido</label>
+        <form action="https://sheetdb.io/api/v1/4higg494bwcva" method="post" id="sheetdb-form">
+          <label for="Nombre y Apellido" id="H1">Nombre y Apellido</label>
           <input id="entrada" 
           type="text" 
           id="nombre" 
-          placeholder="Marcos Villamizar"  
+          placeholder="Marcos Villamizar" 
+          name="data[Nombre y Apellido]"
           required><br>
           <br>
 
-          <label id="H1">Edad</label>
+          <label for="Edad" id="H1">Edad</label>
           <input id="entrada" 
           type="number" 
           id="edad" 
-          placeholder="18"  
+          placeholder="18"
+          name="data[Edad]"  
           required><br>
           <br>
 
-          <label id="H1">Correo electronico</label>
+          <label for="Correo electronico" id="H1">Correo electronico</label>
           <input id="entrada" 
           type="email" 
           id="correo" 
-          placeholder="xxxxxxx@gmail.com"  
+          placeholder="xxxxxxx@gmail.com"
+          name="data[Correo electronico]" 
           required><br>
           <br>
 
           <p id="suggest">En una escala de 1 - muy mala, a 5 - excelente.<br> Como calificarias mi guia referente al desarrollo web.</p>
-          <select id="calificacion" required>
-            <option value="1">1 - Muy mala -</option>
-            <option value="2">2 - Mala -</option>
-            <option value="3">3 - Normal - </option>
-            <option value="4">4 - Buena -</option>
-            <option value="5">5 - Muy buena-</option>
+          <select for="Calificacion" id="calificacion" name="data[Calificacion]" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select><br>
           <br>
           
@@ -54,5 +57,21 @@
         </form>
       </div>
     </div>
+
+    <script>
+      var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      window.open('../Form/index.html', '_blank');
+    });
+  });
+
+    </script>
   </body>
 </html>
