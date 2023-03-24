@@ -1,0 +1,75 @@
+    body {
+        background: linear-gradient(to bottom, #48cae4,#00b4d8 50%, #0096c7 60%, #0077b6 70%, #023e8a 80%, #03045e 90%, #03045e 100%);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0 auto;
+        max-width: 90%;
+        margin: 60px;
+        padding: 20px;
+        text-align: justify;
+        text-size-adjust: auto;
+        color: white;
+    }
+
+    /*div div{
+        
+        padding: 5%;
+        text-align: justify;
+        background: radial-gradient(circle 120px,#48cae4, #00b4d8 50%);
+        max-width: fit-content;
+        width: 100%;
+        margin: auto;
+        font-size: small;
+    }
+    */
+    div div{
+        width: 100%;
+        margin: auto;
+        max-width: fit-content;
+        outline: none;
+        text-align: justify;
+        background: linear-gradient(135deg, #014f86 0%, #01497c 25%, #013a63 50%, #012a4a 75%, #03045e 100%);
+        background-size: 20%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    #Cuerpo{
+        width: 100%;
+        margin-left: 40%;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    th{
+        background-color: #013a63;
+    }
+    td{
+        background-color: #0096c7;
+        padding: 5px
+    }
+    div a {
+        text-decoration: none;
+        background: #0077b6;
+        padding: 8px;
+        color: white;
+        border-radius: 8px; 
+        
+    }
+
+    div a:hover{
+        background: wheat;
+        transition: 2s;
+    }
+
+    div a:active{
+        background: white;
+    }
